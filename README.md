@@ -1,3 +1,3 @@
 # PHP
 
-* [CodeIgniter](condelgniter.md)
+* [CodeIgniter](codelgniter.md)
