@@ -11,4 +11,15 @@
 |application/config/config.php |更改設定： Base Site URL:  $config['base_url'] = 'http://ci.com'; |
 |application/config/config.php |更改設定：Index File: $config['index_page'] = '';|
 |application/config/routes.php |$route['default_controller'] = '寫入application/controller/預設首頁名稱';|
-|user_guide/>.htaccess         |設定Rewrite功能| 
+|>.htaccess         |設定Rewrite功能| 
+
+>.htaccess內容:
+
+RewriteEngine On
+     
+RewriteCond $1 !^(index\.php|images|css|js|robots\.txt|favicon\.ico|sitemap.xml|newfile.php)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ ./index.php?/$1 [L,QSA]
+
+# RewriteRule fuck newfile.php
