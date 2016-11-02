@@ -13,6 +13,7 @@
 |application/config/routes.php |$route['default_controller'] = '寫入application/controller/預設首頁名稱';|
 |>.htaccess         |設定Rewrite功能| 
 
+```html
 >.htaccess內容:
 
 RewriteEngine On
@@ -23,3 +24,4 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ ./index.php?/$1 [L,QSA]
 
 # RewriteRule fuck newfile.php
+```
